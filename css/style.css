@@ -1,3 +1,53 @@
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Empilha os elementos */
+    height: auto; /* Ajusta a altura */
+    padding: 10px;
+  }
+
+  .nav-left, .nav-right {
+    justify-content: center; /* Centraliza os itens */
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    height: 40px; /* Reduz a logo para telas menores */
+    margin-bottom: 10px;
+  }
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Exibir ao clicar */
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-toggle:active + .dropdown-content {
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  nav a {
+    font-size: 14px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-input, .search-button {
+    width: 100%;
+  }
+}
+
+
+
 
 /* Estilização da barra de navegação */
 nav {
