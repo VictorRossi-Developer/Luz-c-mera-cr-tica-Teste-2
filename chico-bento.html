@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Filme - Chico Bento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Menu suspenso de "Serviços" */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ffcc00;
+      color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      padding: 5px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .search-button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: black;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .search-button:hover {
+      background-color: #ff9900;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .pipoca {
+      font-size: 50px;
+      display: inline-block;
+      animation: balancar 1.5s infinite ease-in-out;
+      margin-right: 10px;
+    }
+
+    @keyframes balancar {
+      0%   { transform: rotate(0deg); }
+      25%  { transform: rotate(-10deg); }
+      50%  { transform: rotate(10deg); }
+      75%  { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    h1 {
+      color: red;
+      display: inline-block;
+      font-family: Arial, sans-serif;
+    }
+
+    .movie-detail {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .movie-detail img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .movie-info {
+      max-width: 600px;
+    }
+
+    .movie-info h2 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    .movie-info p {
+      font-size: 16px;
+      color: #666;
+      margin: 5px 0;
+    }
+
+    .movie-info .rating {
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .movie-info .button {
+      background-color: #ffcc00;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+    }
+
+    .movie-info .button:hover {
+      background-color: #ff9900;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegação -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <div class="dropdown">
+      <a href="servicos.html">Serviços</a>
+      <div class="dropdown-content">
+        <a href="./serviços/consultoria.html">Consultoria</a>
+        <a href="./serviços/producao.html">Produção</a>
+        <a href="./serviços/distribuicao.html">Distribuição</a>
+      </div>
+    </div>
+    <a href="./serviços/contato.html">Contato</a>
+    <div class="search-bar">
+      <input type="text" class="search-input" id="search-input" placeholder="Pesquisar..." />
+      <button class="search-button" onclick="searchFilme()">Buscar</button>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <div class="header">
+    <span class="pipoca">🍿</span>
+    <h1>Detalhes do Filme - Chico Bento</h1>
+  </div>
+
+  <!-- Detalhes do Filme -->
+  <div class="movie-detail">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Chico_Bento_animated_logo.jpg/1280px-Chico_Bento_animated_logo.jpg" alt="Chico Bento">
+    <div class="movie-info">
+      <h2>Chico Bento - O Filme</h2>
+      <p><strong>Descrição:</strong> Uma história de simplicidade e aventura no interior. Ideal para toda a família! Chico Bento vive no interior do Brasil e enfrenta diversas aventuras enquanto aprende lições de vida.</p>
+      <p><strong>Ano:</strong> 2025</p>
+      <p><strong>Duração:</strong> 1h 30min</p>
+      <p><strong>Gênero:</strong> Animação, Aventura, Família</p>
+      <p><strong>Classificação:</strong> Livre</p>
+      <p><strong>Avaliação:</strong> <span class="rating">★★★★☆</span></p>
+      <p><strong>Diretor:</strong> José da Silva</p>
+      <p><strong>Elenco:</strong> Chico Bento, Maria, Zé Lelé</p>
+      <p><strong>Sinopse Completa:</strong> Chico Bento é um menino do interior que vive aventuras engraçadas com seus amigos e enfrenta desafios, tudo enquanto aprende importantes lições de vida sobre amizade, coragem e simplicidade. A animação traz uma história leve e divertida, com belos cenários do campo brasileiro.</p>
+
+      <!-- Link para a página de avaliação -->
+      <a href="avaliacao.html" class="button">Avaliar Filme</a>
+    </div>
+  </div>
+
+  <script>
+    function searchFilme() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      if (query === "chico bento") {
+        window.location.href = "chico-bento.html";
+      } else {
+        alert("Conteúdo não encontrado!");
+      }
+    }
+
+    // Permite enviar a pesquisa ao pressionar Enter
+    document.getElementById('search-input').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        searchFilme();
+      }
+    });
+  </script>
+
+</body>
+</html>
